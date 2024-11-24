@@ -1,0 +1,34 @@
+\doxysection{Maui\+Program.\+cs}
+\hypertarget{a00011_source}{}\label{a00011_source}\mbox{\hyperlink{a00011}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{a00011_source_l00001}00001\ \textcolor{keyword}{using\ }WeightTrackApp.Data;}
+\DoxyCodeLine{\Hypertarget{a00011_source_l00002}00002\ \textcolor{keyword}{using\ }WeightTrackApp.ViewModels;}
+\DoxyCodeLine{\Hypertarget{a00011_source_l00003}00003\ \textcolor{keyword}{using\ }Microsoft.Extensions.Logging;}
+\DoxyCodeLine{\Hypertarget{a00011_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{a00011_source_l00005}00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{a00014}{WeightTrackApp}}}
+\DoxyCodeLine{\Hypertarget{a00011_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{a00011_source_l00007}00007\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{class\ }MauiProgram}
+\DoxyCodeLine{\Hypertarget{a00011_source_l00008}00008\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{a00011_source_l00009}00009\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ MauiApp\ CreateMauiApp()}
+\DoxyCodeLine{\Hypertarget{a00011_source_l00010}00010\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{a00011_source_l00011}00011\ \ \ \ \ \ \ \ \ \ \ \ \ var\ builder\ =\ MauiApp.CreateBuilder();}
+\DoxyCodeLine{\Hypertarget{a00011_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ builder}
+\DoxyCodeLine{\Hypertarget{a00011_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .UseMauiApp<App>()}
+\DoxyCodeLine{\Hypertarget{a00011_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ConfigureFonts(fonts\ =>}
+\DoxyCodeLine{\Hypertarget{a00011_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{a00011_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fonts.AddFont(\textcolor{stringliteral}{"{}OpenSans-\/Regular.ttf"{}},\ \textcolor{stringliteral}{"{}OpenSansRegular"{}});}
+\DoxyCodeLine{\Hypertarget{a00011_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fonts.AddFont(\textcolor{stringliteral}{"{}OpenSans-\/Semibold.ttf"{}},\ \textcolor{stringliteral}{"{}OpenSansSemibold"{}});}
+\DoxyCodeLine{\Hypertarget{a00011_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{a00011_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{a00011_source_l00020}00020\ \textcolor{preprocessor}{\#if\ DEBUG}}
+\DoxyCodeLine{\Hypertarget{a00011_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ builder.Logging.AddDebug();}
+\DoxyCodeLine{\Hypertarget{a00011_source_l00022}00022\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{a00011_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ builder.Services.AddSingleton<DatabaseContext>();}
+\DoxyCodeLine{\Hypertarget{a00011_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ builder.Services.AddSingleton<WeightViewModel>();}
+\DoxyCodeLine{\Hypertarget{a00011_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ builder.Services.AddSingleton<MainPage>();}
+\DoxyCodeLine{\Hypertarget{a00011_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ builder.Build();}
+\DoxyCodeLine{\Hypertarget{a00011_source_l00027}00027\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{a00011_source_l00028}00028\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{a00011_source_l00029}00029\ \}}
+
+\end{DoxyCode}

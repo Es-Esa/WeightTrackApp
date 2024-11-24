@@ -1,0 +1,293 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WeightTrackApp</name>
+    </assembly>
+    <members>
+        <member name="T:WeightTrackApp.Data.DatabaseContext">
+            <summary>
+            Provides an asynchronous context for managing SQLite database operations.
+            </summary>
+        </member>
+        <member name="F:WeightTrackApp.Data.DatabaseContext.DbName">
+            <summary>
+            The name of the database file.
+            </summary>
+        </member>
+        <member name="P:WeightTrackApp.Data.DatabaseContext.DbPath">
+            <summary>
+            The full path to the database file in the application's data directory.
+            </summary>
+        </member>
+        <member name="P:WeightTrackApp.Data.DatabaseContext.Database">
+            <summary>
+            Initializes or retrieves the SQLite database connection.
+            </summary>
+        </member>
+        <member name="M:WeightTrackApp.Data.DatabaseContext.CreateTableIfNotExists``1">
+            <summary>
+            Ensures a table for the specified type exists in the database.
+            </summary>
+            <typeparam name="TTable">The type of the table to create.</typeparam>
+        </member>
+        <member name="M:WeightTrackApp.Data.DatabaseContext.GetTableAsync``1">
+            <summary>
+            Retrieves a table query object for the specified type.
+            </summary>
+            <typeparam name="TTable">The type of the table to query.</typeparam>
+            <returns>A query object for accessing the table.</returns>
+        </member>
+        <member name="M:WeightTrackApp.Data.DatabaseContext.GetAllAsync``1">
+            <summary>
+            Retrieves all records from the specified table.
+            </summary>
+            <typeparam name="TTable">The type of the table to query.</typeparam>
+            <returns>A collection of all records in the table.</returns>
+        </member>
+        <member name="M:WeightTrackApp.Data.DatabaseContext.GetFileteredAsync``1(System.Linq.Expressions.Expression{System.Func{``0,System.Boolean}})">
+            <summary>
+            Retrieves records from the specified table that match a given predicate.
+            </summary>
+            <typeparam name="TTable">The type of the table to query.</typeparam>
+            <param name="predicate">The filter condition to apply.</param>
+            <returns>A collection of records that match the filter condition.</returns>
+        </member>
+        <member name="M:WeightTrackApp.Data.DatabaseContext.Execute``2(System.Func{System.Threading.Tasks.Task{``1}})">
+            <summary>
+            Executes a given operation while ensuring the table exists.
+            </summary>
+            <typeparam name="TTable">The type of the table to operate on.</typeparam>
+            <typeparam name="TResult">The type of the result of the operation.</typeparam>
+            <param name="action">The operation to execute.</param>
+            <returns>The result of the operation.</returns>
+        </member>
+        <member name="M:WeightTrackApp.Data.DatabaseContext.GetItemByKeyAsync``1(System.Object)">
+            <summary>
+            Retrieves a record from the specified table by its primary key.
+            </summary>
+            <typeparam name="TTable">The type of the table to query.</typeparam>
+            <param name="primaryKey">The primary key of the record to retrieve.</param>
+            <returns>The record with the specified primary key.</returns>
+        </member>
+        <member name="M:WeightTrackApp.Data.DatabaseContext.AddItemAsync``1(``0)">
+            <summary>
+            Adds a new record to the specified table.
+            </summary>
+            <typeparam name="TTable">The type of the table to operate on.</typeparam>
+            <param name="item">The record to add.</param>
+            <returns>True if the operation was successful, otherwise false.</returns>
+        </member>
+        <member name="M:WeightTrackApp.Data.DatabaseContext.UpdateItemAsync``1(``0)">
+            <summary>
+            Updates an existing record in the specified table.
+            </summary>
+            <typeparam name="TTable">The type of the table to operate on.</typeparam>
+            <param name="item">The record to update.</param>
+            <returns>True if the operation was successful, otherwise false.</returns>
+        </member>
+        <member name="M:WeightTrackApp.Data.DatabaseContext.DeleteItemAsync``1(``0)">
+            <summary>
+            Deletes a record from the specified table.
+            </summary>
+            <typeparam name="TTable">The type of the table to operate on.</typeparam>
+            <param name="item">The record to delete.</param>
+            <returns>True if the operation was successful, otherwise false.</returns>
+        </member>
+        <member name="M:WeightTrackApp.Data.DatabaseContext.DeleteItemByKeyAsync``1(System.Object)">
+            <summary>
+            Deletes a record from the specified table by its primary key.
+            </summary>
+            <typeparam name="TTable">The type of the table to operate on.</typeparam>
+            <param name="primaryKey">The primary key of the record to delete.</param>
+            <returns>True if the operation was successful, otherwise false.</returns>
+        </member>
+        <member name="M:WeightTrackApp.Data.DatabaseContext.DisposeAsync">
+            <summary>
+            Disposes of the database connection asynchronously.
+            </summary>
+        </member>
+        <member name="T:WeightTrackApp.MainPage">
+            <summary>
+            Represents the main page of the WeightTrackApp application.
+            Provides the user interface for managing weight entries.
+            </summary>
+        </member>
+        <member name="M:WeightTrackApp.MainPage.#ctor(WeightTrackApp.ViewModels.WeightViewModel)">
+            <summary>
+            Initializes a new instance of the <see cref="T:WeightTrackApp.MainPage"/> class.
+            </summary>
+            <param name="viewModel">The ViewModel used for binding data to the page.</param>
+        </member>
+        <member name="M:WeightTrackApp.MainPage.OnAppearing">
+            <summary>
+            Invoked when the page appears on the screen.
+            Loads weight data asynchronously and updates the UI.
+            </summary>
+        </member>
+        <member name="T:WeightTrackApp.Models.Weights">
+            <summary>
+            Represents a weight entry with details such as ID, weight value, and date.
+            </summary>
+        </member>
+        <member name="P:WeightTrackApp.Models.Weights.Id">
+            <summary>
+            Gets or sets the unique identifier for the weight entry.
+            </summary>
+        </member>
+        <member name="P:WeightTrackApp.Models.Weights.Weight">
+            <summary>
+            Gets or sets the weight value in kilograms.
+            </summary>
+        </member>
+        <member name="P:WeightTrackApp.Models.Weights.Date">
+            <summary>
+            Gets or sets the date of the weight entry.
+            </summary>
+        </member>
+        <member name="M:WeightTrackApp.Models.Weights.Clone">
+            <summary>
+            Creates a shallow copy of the current <see cref="T:WeightTrackApp.Models.Weights"/> object.
+            </summary>
+            <returns>A new <see cref="T:WeightTrackApp.Models.Weights"/> object with the same values.</returns>
+        </member>
+        <member name="M:WeightTrackApp.Models.Weights.Validate">
+            <summary>
+            Validates the current weight entry to ensure all required properties are valid.
+            </summary>
+            <returns>
+            A tuple where <c>IsValid</c> is true if the weight is valid; otherwise, false.
+            <c>ErrorMessage</c> contains the validation error message, if any.
+            </returns>
+        </member>
+        <member name="T:WeightTrackApp.ViewModels.WeightViewModel">
+            <summary>
+            ViewModel for managing weight entries and providing data-binding for the UI.
+            </summary>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+            <inheritdoc/>
+        </member>
+        <member name="M:WeightTrackApp.ViewModels.WeightViewModel.#ctor(WeightTrackApp.Data.DatabaseContext)">
+            <summary>
+            Initializes a new instance of the <see cref="T:WeightTrackApp.ViewModels.WeightViewModel"/> class.
+            </summary>
+            <param name="context">The database context used for data operations.</param>
+        </member>
+        <member name="F:WeightTrackApp.ViewModels.WeightViewModel._weights">
+            <summary>
+            Collection of all weight entries displayed in the UI.
+            </summary>
+        </member>
+        <member name="F:WeightTrackApp.ViewModels.WeightViewModel._operatingWeights">
+            <summary>
+            The weight entry currently being operated on (create/edit).
+            </summary>
+        </member>
+        <member name="F:WeightTrackApp.ViewModels.WeightViewModel._isBusy">
+            <summary>
+            Indicates whether a background operation is currently running.
+            </summary>
+        </member>
+        <member name="F:WeightTrackApp.ViewModels.WeightViewModel._busyText">
+            <summary>
+            The text displayed to indicate the status of a background operation.
+            </summary>
+        </member>
+        <member name="M:WeightTrackApp.ViewModels.WeightViewModel.LoadWeightASync">
+            <summary>
+            Loads all weight entries from the database and populates the collection.
+            </summary>
+        </member>
+        <member name="M:WeightTrackApp.ViewModels.WeightViewModel.SetOperatingWeight(WeightTrackApp.Models.Weights)">
+            <summary>
+            Sets the operating weight to a new or existing weight entry.
+            </summary>
+            <param name="weight">The weight entry to operate on. If null, creates a new entry.</param>
+        </member>
+        <member name="M:WeightTrackApp.ViewModels.WeightViewModel.SaveWeightAsync">
+            <summary>
+            Saves the current operating weight to the database, either creating or updating it.
+            </summary>
+        </member>
+        <member name="M:WeightTrackApp.ViewModels.WeightViewModel.DeleteWeightAsync(System.Int32)">
+            <summary>
+            Deletes a weight entry by its identifier.
+            </summary>
+            <param name="id">The identifier of the weight entry to delete.</param>
+        </member>
+        <member name="M:WeightTrackApp.ViewModels.WeightViewModel.ExecuteAsync(System.Func{System.Threading.Tasks.Task},System.String)">
+            <summary>
+            Executes an asynchronous operation while managing the busy state and status text.
+            </summary>
+            <param name="operation">The asynchronous operation to execute.</param>
+            <param name="busyText">The text to display during the operation.</param>
+        </member>
+        <member name="P:WeightTrackApp.ViewModels.WeightViewModel.Weights">
+            <inheritdoc cref="F:WeightTrackApp.ViewModels.WeightViewModel._weights"/>
+        </member>
+        <member name="P:WeightTrackApp.ViewModels.WeightViewModel.OperatingWeights">
+            <inheritdoc cref="F:WeightTrackApp.ViewModels.WeightViewModel._operatingWeights"/>
+        </member>
+        <member name="P:WeightTrackApp.ViewModels.WeightViewModel.IsBusy">
+            <inheritdoc cref="F:WeightTrackApp.ViewModels.WeightViewModel._isBusy"/>
+        </member>
+        <member name="P:WeightTrackApp.ViewModels.WeightViewModel.BusyText">
+            <inheritdoc cref="F:WeightTrackApp.ViewModels.WeightViewModel._busyText"/>
+        </member>
+        <member name="F:WeightTrackApp.ViewModels.WeightViewModel.setOperatingWeightCommand">
+            <summary>The backing field for <see cref="P:WeightTrackApp.ViewModels.WeightViewModel.SetOperatingWeightCommand"/>.</summary>
+        </member>
+        <member name="P:WeightTrackApp.ViewModels.WeightViewModel.SetOperatingWeightCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IRelayCommand`1"/> instance wrapping <see cref="M:WeightTrackApp.ViewModels.WeightViewModel.SetOperatingWeight(WeightTrackApp.Models.Weights)"/>.</summary>
+        </member>
+        <member name="F:WeightTrackApp.ViewModels.WeightViewModel.saveWeightCommand">
+            <summary>The backing field for <see cref="P:WeightTrackApp.ViewModels.WeightViewModel.SaveWeightCommand"/>.</summary>
+        </member>
+        <member name="P:WeightTrackApp.ViewModels.WeightViewModel.SaveWeightCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand"/> instance wrapping <see cref="M:WeightTrackApp.ViewModels.WeightViewModel.SaveWeightAsync"/>.</summary>
+        </member>
+        <member name="F:WeightTrackApp.ViewModels.WeightViewModel.deleteWeightCommand">
+            <summary>The backing field for <see cref="P:WeightTrackApp.ViewModels.WeightViewModel.DeleteWeightCommand"/>.</summary>
+        </member>
+        <member name="P:WeightTrackApp.ViewModels.WeightViewModel.DeleteWeightCommand">
+            <summary>Gets an <see cref="T:CommunityToolkit.Mvvm.Input.IAsyncRelayCommand`1"/> instance wrapping <see cref="M:WeightTrackApp.ViewModels.WeightViewModel.DeleteWeightAsync(System.Int32)"/>.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.Weights">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "Weights" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.OperatingWeights">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "OperatingWeights" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangingArgs.BusyText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangingEventArgs"/> instance for all "BusyText" generated properties.</summary>
+        </member>
+        <member name="T:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs">
+            <summary>
+            A helper type providing cached, reusable <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instances
+            for all properties generated with <see cref="T:CommunityToolkit.Mvvm.ComponentModel.ObservablePropertyAttribute"/>.
+            </summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.Weights">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "Weights" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.OperatingWeights">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "OperatingWeights" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.IsBusy">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "IsBusy" generated properties.</summary>
+        </member>
+        <member name="F:CommunityToolkit.Mvvm.ComponentModel.__Internals.__KnownINotifyPropertyChangedArgs.BusyText">
+            <summary>The cached <see cref="T:System.ComponentModel.PropertyChangedEventArgs"/> instance for all "BusyText" generated properties.</summary>
+        </member>
+    </members>
+</doc>

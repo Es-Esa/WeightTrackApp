@@ -1,0 +1,27 @@
+\doxysection{Main\+Page.\+xaml.\+cs}
+\hypertarget{_main_page_8xaml_8cs_source}{}\label{_main_page_8xaml_8cs_source}\mbox{\hyperlink{_main_page_8xaml_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_main_page_8xaml_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }WeightTrackApp.ViewModels;}
+\DoxyCodeLine{\Hypertarget{_main_page_8xaml_8cs_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{_main_page_8xaml_8cs_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_weight_track_app}{WeightTrackApp}}}
+\DoxyCodeLine{\Hypertarget{_main_page_8xaml_8cs_source_l00004}00004\ \{}
+\DoxyCodeLine{\Hypertarget{_main_page_8xaml_8cs_source_l00009}\mbox{\hyperlink{class_weight_track_app_1_1_main_page}{00009}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{partial\ class\ }\mbox{\hyperlink{class_weight_track_app_1_1_main_page}{MainPage}}\ :\ ContentPage}
+\DoxyCodeLine{\Hypertarget{_main_page_8xaml_8cs_source_l00010}00010\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_page_8xaml_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ WeightViewModel\ \_viewModel;}
+\DoxyCodeLine{\Hypertarget{_main_page_8xaml_8cs_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_main_page_8xaml_8cs_source_l00017}\mbox{\hyperlink{class_weight_track_app_1_1_main_page_a075975046170487299e21ae0ab8f1470}{00017}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{class_weight_track_app_1_1_main_page_a075975046170487299e21ae0ab8f1470}{MainPage}}(WeightViewModel\ viewModel)}
+\DoxyCodeLine{\Hypertarget{_main_page_8xaml_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_page_8xaml_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ InitializeComponent();}
+\DoxyCodeLine{\Hypertarget{_main_page_8xaml_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ BindingContext\ =\ viewModel;}
+\DoxyCodeLine{\Hypertarget{_main_page_8xaml_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \_viewModel\ =\ viewModel;}
+\DoxyCodeLine{\Hypertarget{_main_page_8xaml_8cs_source_l00022}00022\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_page_8xaml_8cs_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_main_page_8xaml_8cs_source_l00028}\mbox{\hyperlink{class_weight_track_app_1_1_main_page_a045b4bb5548d84f29c94d2e4fbf00701}{00028}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ async\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_weight_track_app_1_1_main_page_a045b4bb5548d84f29c94d2e4fbf00701}{OnAppearing}}()}
+\DoxyCodeLine{\Hypertarget{_main_page_8xaml_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_main_page_8xaml_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ base.OnAppearing();}
+\DoxyCodeLine{\Hypertarget{_main_page_8xaml_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_viewModel.LoadWeightASync();}
+\DoxyCodeLine{\Hypertarget{_main_page_8xaml_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_page_8xaml_8cs_source_l00033}00033\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_main_page_8xaml_8cs_source_l00034}00034\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,34 @@
+\doxysection{Maui\+Program.\+cs}
+\hypertarget{_maui_program_8cs_source}{}\label{_maui_program_8cs_source}\mbox{\hyperlink{_maui_program_8cs}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_maui_program_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }WeightTrackApp.Data;}
+\DoxyCodeLine{\Hypertarget{_maui_program_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }WeightTrackApp.ViewModels;}
+\DoxyCodeLine{\Hypertarget{_maui_program_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }Microsoft.Extensions.Logging;}
+\DoxyCodeLine{\Hypertarget{_maui_program_8cs_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{_maui_program_8cs_source_l00005}00005\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_weight_track_app}{WeightTrackApp}}}
+\DoxyCodeLine{\Hypertarget{_maui_program_8cs_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{_maui_program_8cs_source_l00007}00007\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{class\ }MauiProgram}
+\DoxyCodeLine{\Hypertarget{_maui_program_8cs_source_l00008}00008\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_maui_program_8cs_source_l00009}00009\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ MauiApp\ CreateMauiApp()}
+\DoxyCodeLine{\Hypertarget{_maui_program_8cs_source_l00010}00010\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_maui_program_8cs_source_l00011}00011\ \ \ \ \ \ \ \ \ \ \ \ \ var\ builder\ =\ MauiApp.CreateBuilder();}
+\DoxyCodeLine{\Hypertarget{_maui_program_8cs_source_l00012}00012\ \ \ \ \ \ \ \ \ \ \ \ \ builder}
+\DoxyCodeLine{\Hypertarget{_maui_program_8cs_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .UseMauiApp<App>()}
+\DoxyCodeLine{\Hypertarget{_maui_program_8cs_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ConfigureFonts(fonts\ =>}
+\DoxyCodeLine{\Hypertarget{_maui_program_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_maui_program_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fonts.AddFont(\textcolor{stringliteral}{"{}OpenSans-\/Regular.ttf"{}},\ \textcolor{stringliteral}{"{}OpenSansRegular"{}});}
+\DoxyCodeLine{\Hypertarget{_maui_program_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ fonts.AddFont(\textcolor{stringliteral}{"{}OpenSans-\/Semibold.ttf"{}},\ \textcolor{stringliteral}{"{}OpenSansSemibold"{}});}
+\DoxyCodeLine{\Hypertarget{_maui_program_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_maui_program_8cs_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{_maui_program_8cs_source_l00020}00020\ \textcolor{preprocessor}{\#if\ DEBUG}}
+\DoxyCodeLine{\Hypertarget{_maui_program_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ builder.Logging.AddDebug();}
+\DoxyCodeLine{\Hypertarget{_maui_program_8cs_source_l00022}00022\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_maui_program_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ builder.Services.AddSingleton<DatabaseContext>();}
+\DoxyCodeLine{\Hypertarget{_maui_program_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ builder.Services.AddSingleton<WeightViewModel>();}
+\DoxyCodeLine{\Hypertarget{_maui_program_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ builder.Services.AddSingleton<MainPage>();}
+\DoxyCodeLine{\Hypertarget{_maui_program_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ builder.Build();}
+\DoxyCodeLine{\Hypertarget{_maui_program_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_maui_program_8cs_source_l00028}00028\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_maui_program_8cs_source_l00029}00029\ \}}
+
+\end{DoxyCode}

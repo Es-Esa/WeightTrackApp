@@ -1,0 +1,25 @@
+var a01915 =
+[
+    [ "compat_button_inset_horizontal_material", "df/d11/a01915_a5c5d5401f121407c74e37349b7e1e938.html#a5c5d5401f121407c74e37349b7e1e938", null ],
+    [ "compat_button_inset_vertical_material", "df/d11/a01915_a98d611e63d6e2e7a204aff4b8e7f109a.html#a98d611e63d6e2e7a204aff4b8e7f109a", null ],
+    [ "compat_button_padding_horizontal_material", "df/d11/a01915_aeeb2bed9acd8ffd75b724704c7ff9504.html#aeeb2bed9acd8ffd75b724704c7ff9504", null ],
+    [ "compat_button_padding_vertical_material", "df/d11/a01915_ad1df7000e467551b7115397a456e1a94.html#ad1df7000e467551b7115397a456e1a94", null ],
+    [ "compat_control_corner_material", "df/d11/a01915_a3d09cff42cc011b8a6fb669c0bf7efdf.html#a3d09cff42cc011b8a6fb669c0bf7efdf", null ],
+    [ "compat_notification_large_icon_max_height", "df/d11/a01915_a9457e5767d21b28cc1bfca3201b844d9.html#a9457e5767d21b28cc1bfca3201b844d9", null ],
+    [ "compat_notification_large_icon_max_width", "df/d11/a01915_a5c63d81e366af399a48a7162994a1211.html#a5c63d81e366af399a48a7162994a1211", null ],
+    [ "notification_action_icon_size", "df/d11/a01915_a2c9510f2aaf753f0f32c8f2e69e77001.html#a2c9510f2aaf753f0f32c8f2e69e77001", null ],
+    [ "notification_action_text_size", "df/d11/a01915_a4ee512636b6e2ae2858f6557d02679b4.html#a4ee512636b6e2ae2858f6557d02679b4", null ],
+    [ "notification_big_circle_margin", "df/d11/a01915_a75fcc5a1022a772ed6de2003d9b89cec.html#a75fcc5a1022a772ed6de2003d9b89cec", null ],
+    [ "notification_content_margin_start", "df/d11/a01915_adad87b59c1eccf9e9af88e97f2101320.html#adad87b59c1eccf9e9af88e97f2101320", null ],
+    [ "notification_large_icon_height", "df/d11/a01915_a7d46d6fa47c59f65ee3fde5bc162871f.html#a7d46d6fa47c59f65ee3fde5bc162871f", null ],
+    [ "notification_large_icon_width", "df/d11/a01915_a33adca4b4f2d1b714306d33104f95dd7.html#a33adca4b4f2d1b714306d33104f95dd7", null ],
+    [ "notification_main_column_padding_top", "df/d11/a01915_a9408f1f62f8c560f252db2531538bce7.html#a9408f1f62f8c560f252db2531538bce7", null ],
+    [ "notification_media_narrow_margin", "df/d11/a01915_ab7ea23b401a1f4a169792b7d9b28997b.html#ab7ea23b401a1f4a169792b7d9b28997b", null ],
+    [ "notification_right_icon_size", "df/d11/a01915_a7412af671c6abff2068eaecf5c114c42.html#a7412af671c6abff2068eaecf5c114c42", null ],
+    [ "notification_right_side_padding_top", "df/d11/a01915_ae553ebff17b999bcff0878d595e170c2.html#ae553ebff17b999bcff0878d595e170c2", null ],
+    [ "notification_small_icon_background_padding", "df/d11/a01915_a55d5fd287d56f4dac17fb5886a268216.html#a55d5fd287d56f4dac17fb5886a268216", null ],
+    [ "notification_small_icon_size_as_large", "df/d11/a01915_a9b65a03b25a09749fff9d6f2f4b781b1.html#a9b65a03b25a09749fff9d6f2f4b781b1", null ],
+    [ "notification_subtext_size", "df/d11/a01915_a7367a614799c27b8a4b87f3e20df0d5c.html#a7367a614799c27b8a4b87f3e20df0d5c", null ],
+    [ "notification_top_pad", "df/d11/a01915_ae450e00379410424e1043a9e224c23ee.html#ae450e00379410424e1043a9e224c23ee", null ],
+    [ "notification_top_pad_large_text", "df/d11/a01915_a76e3c3186af76072205bdebf9c8c8ee1.html#a76e3c3186af76072205bdebf9c8c8ee1", null ]
+];

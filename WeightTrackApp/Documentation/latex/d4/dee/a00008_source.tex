@@ -1,0 +1,27 @@
+\doxysection{Main\+Page.\+xaml.\+cs}
+\hypertarget{a00008_source}{}\label{a00008_source}\mbox{\hyperlink{a00008}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00001}00001\ \textcolor{keyword}{using\ }WeightTrackApp.ViewModels;}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{a00008_source_l00003}00003\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{a00014}{WeightTrackApp}}}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00004}00004\ \{}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00009}\mbox{\hyperlink{a00029}{00009}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{partial\ class\ }\mbox{\hyperlink{a00029}{MainPage}}\ :\ ContentPage}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00010}00010\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00011}00011\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ WeightViewModel\ \_viewModel;}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{a00008_source_l00017}\mbox{\hyperlink{a00029_a075975046170487299e21ae0ab8f1470}{00017}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{a00029_a075975046170487299e21ae0ab8f1470}{MainPage}}(WeightViewModel\ viewModel)}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00018}00018\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ InitializeComponent();}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ BindingContext\ =\ viewModel;}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \_viewModel\ =\ viewModel;}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00022}00022\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{a00008_source_l00028}\mbox{\hyperlink{a00029_a045b4bb5548d84f29c94d2e4fbf00701}{00028}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{protected}\ async\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{a00029_a045b4bb5548d84f29c94d2e4fbf00701}{OnAppearing}}()}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00029}00029\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ base.OnAppearing();}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ await\ \_viewModel.LoadWeightASync();}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00032}00032\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00033}00033\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{a00008_source_l00034}00034\ \}}
+
+\end{DoxyCode}

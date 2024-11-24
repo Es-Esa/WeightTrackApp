@@ -1,0 +1,183 @@
+\doxysection{Weight\+Track\+App.\+View\+Models.\+Weight\+View\+Model Class Reference}
+\hypertarget{a04483}{}\label{a04483}\index{WeightTrackApp.ViewModels.WeightViewModel@{WeightTrackApp.ViewModels.WeightViewModel}}
+
+
+View\+Model for managing weight entries and providing data-\/binding for the UI.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{a04483_acfde2bbdbcf8ec9f3793df7b8e16ab82_acfde2bbdbcf8ec9f3793df7b8e16ab82}{Weight\+View\+Model}} (\mbox{\hyperlink{a01439}{Database\+Context}} context)
+\begin{DoxyCompactList}\small\item\em Initializes a new instance of the \doxylink{a04483}{Weight\+View\+Model} class. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{a04483_a068336e0a5b9835078bd56b855b8d802_a068336e0a5b9835078bd56b855b8d802}{Load\+Weight\+ASync}} ()
+\begin{DoxyCompactList}\small\item\em Loads all weight entries from the database and populates the collection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{a04483_ab12a8bc68e9c573c1492ae19dd1184c8_ab12a8bc68e9c573c1492ae19dd1184c8}{Set\+Operating\+Weight}} (\mbox{\hyperlink{a01451}{Weights}}? weight)
+\begin{DoxyCompactList}\small\item\em Sets the operating weight to a new or existing weight entry. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{a04483_a7ca04a4a6096215dbf17101b306410c0_a7ca04a4a6096215dbf17101b306410c0}{Save\+Weight\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Saves the current operating weight to the database, either creating or updating it. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{a04483_afe9f5e1e6a43001d2fe9f7bc0c981414_afe9f5e1e6a43001d2fe9f7bc0c981414}{Delete\+Weight\+Async}} (int id)
+\begin{DoxyCompactList}\small\item\em Deletes a weight entry by its identifier. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{a04483_a6713d8267493e93a43b1dd33bbfa3c0d_a6713d8267493e93a43b1dd33bbfa3c0d}{Execute\+Async}} (Func$<$ Task $>$ operation, string? busy\+Text=null)
+\begin{DoxyCompactList}\small\item\em Executes an asynchronous operation while managing the busy state and status text. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+readonly \mbox{\hyperlink{a01439}{Database\+Context}} \mbox{\hyperlink{a04483_a5bff961ff166bad59e750bd17510a316_a5bff961ff166bad59e750bd17510a316}{\+\_\+context}}
+\item 
+Observable\+Collection$<$ \mbox{\hyperlink{a01451}{Weights}} $>$ \mbox{\hyperlink{a04483_ae19001b0461f61838bb34f249277f6e3_ae19001b0461f61838bb34f249277f6e3}{\+\_\+weights}} = new()
+\begin{DoxyCompactList}\small\item\em Collection of all weight entries displayed in the UI. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{a01451}{Weights}} \mbox{\hyperlink{a04483_aa9edc4265ace62ccebf87d6da8abe92e_aa9edc4265ace62ccebf87d6da8abe92e}{\+\_\+operating\+Weights}} = new()
+\begin{DoxyCompactList}\small\item\em The weight entry currently being operated on (create/edit). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{a04483_a98007d6920095516c1ba53bbc0dd4df0_a98007d6920095516c1ba53bbc0dd4df0}{\+\_\+is\+Busy}}
+\begin{DoxyCompactList}\small\item\em Indicates whether a background operation is currently running. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{a04483_a5c6f4c285d9196301d5c1a894103f685_a5c6f4c285d9196301d5c1a894103f685}{\+\_\+busy\+Text}}
+\begin{DoxyCompactList}\small\item\em The text displayed to indicate the status of a background operation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+View\+Model for managing weight entries and providing data-\/binding for the UI. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{a04483_acfde2bbdbcf8ec9f3793df7b8e16ab82_acfde2bbdbcf8ec9f3793df7b8e16ab82}\index{WeightTrackApp.ViewModels.WeightViewModel@{WeightTrackApp.ViewModels.WeightViewModel}!WeightViewModel@{WeightViewModel}}
+\index{WeightViewModel@{WeightViewModel}!WeightTrackApp.ViewModels.WeightViewModel@{WeightTrackApp.ViewModels.WeightViewModel}}
+\doxysubsubsection{\texorpdfstring{WeightViewModel()}{WeightViewModel()}}
+{\footnotesize\ttfamily \label{a04483_acfde2bbdbcf8ec9f3793df7b8e16ab82_acfde2bbdbcf8ec9f3793df7b8e16ab82} 
+Weight\+Track\+App.\+View\+Models.\+Weight\+View\+Model.\+Weight\+View\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a01439}{Database\+Context}}}]{context}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Initializes a new instance of the \doxylink{a04483}{Weight\+View\+Model} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em context} & The database context used for data operations.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{a04483_afe9f5e1e6a43001d2fe9f7bc0c981414_afe9f5e1e6a43001d2fe9f7bc0c981414}\index{WeightTrackApp.ViewModels.WeightViewModel@{WeightTrackApp.ViewModels.WeightViewModel}!DeleteWeightAsync@{DeleteWeightAsync}}
+\index{DeleteWeightAsync@{DeleteWeightAsync}!WeightTrackApp.ViewModels.WeightViewModel@{WeightTrackApp.ViewModels.WeightViewModel}}
+\doxysubsubsection{\texorpdfstring{DeleteWeightAsync()}{DeleteWeightAsync()}}
+{\footnotesize\ttfamily \label{a04483_afe9f5e1e6a43001d2fe9f7bc0c981414_afe9f5e1e6a43001d2fe9f7bc0c981414} 
+async Task Weight\+Track\+App.\+View\+Models.\+Weight\+View\+Model.\+Delete\+Weight\+Async (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Deletes a weight entry by its identifier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The identifier of the weight entry to delete.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{a04483_a6713d8267493e93a43b1dd33bbfa3c0d_a6713d8267493e93a43b1dd33bbfa3c0d}\index{WeightTrackApp.ViewModels.WeightViewModel@{WeightTrackApp.ViewModels.WeightViewModel}!ExecuteAsync@{ExecuteAsync}}
+\index{ExecuteAsync@{ExecuteAsync}!WeightTrackApp.ViewModels.WeightViewModel@{WeightTrackApp.ViewModels.WeightViewModel}}
+\doxysubsubsection{\texorpdfstring{ExecuteAsync()}{ExecuteAsync()}}
+{\footnotesize\ttfamily \label{a04483_a6713d8267493e93a43b1dd33bbfa3c0d_a6713d8267493e93a43b1dd33bbfa3c0d} 
+async Task Weight\+Track\+App.\+View\+Models.\+Weight\+View\+Model.\+Execute\+Async (\begin{DoxyParamCaption}\item[{Func$<$ Task $>$}]{operation}{, }\item[{string?}]{busy\+Text}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Executes an asynchronous operation while managing the busy state and status text. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em operation} & The asynchronous operation to execute.\\
+\hline
+{\em busy\+Text} & The text to display during the operation.\\
+\hline
+\end{DoxyParams}
+\Hypertarget{a04483_a068336e0a5b9835078bd56b855b8d802_a068336e0a5b9835078bd56b855b8d802}\index{WeightTrackApp.ViewModels.WeightViewModel@{WeightTrackApp.ViewModels.WeightViewModel}!LoadWeightASync@{LoadWeightASync}}
+\index{LoadWeightASync@{LoadWeightASync}!WeightTrackApp.ViewModels.WeightViewModel@{WeightTrackApp.ViewModels.WeightViewModel}}
+\doxysubsubsection{\texorpdfstring{LoadWeightASync()}{LoadWeightASync()}}
+{\footnotesize\ttfamily \label{a04483_a068336e0a5b9835078bd56b855b8d802_a068336e0a5b9835078bd56b855b8d802} 
+async Task Weight\+Track\+App.\+View\+Models.\+Weight\+View\+Model.\+Load\+Weight\+ASync (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Loads all weight entries from the database and populates the collection. 
+
+\Hypertarget{a04483_a7ca04a4a6096215dbf17101b306410c0_a7ca04a4a6096215dbf17101b306410c0}\index{WeightTrackApp.ViewModels.WeightViewModel@{WeightTrackApp.ViewModels.WeightViewModel}!SaveWeightAsync@{SaveWeightAsync}}
+\index{SaveWeightAsync@{SaveWeightAsync}!WeightTrackApp.ViewModels.WeightViewModel@{WeightTrackApp.ViewModels.WeightViewModel}}
+\doxysubsubsection{\texorpdfstring{SaveWeightAsync()}{SaveWeightAsync()}}
+{\footnotesize\ttfamily \label{a04483_a7ca04a4a6096215dbf17101b306410c0_a7ca04a4a6096215dbf17101b306410c0} 
+async Task Weight\+Track\+App.\+View\+Models.\+Weight\+View\+Model.\+Save\+Weight\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Saves the current operating weight to the database, either creating or updating it. 
+
+\Hypertarget{a04483_ab12a8bc68e9c573c1492ae19dd1184c8_ab12a8bc68e9c573c1492ae19dd1184c8}\index{WeightTrackApp.ViewModels.WeightViewModel@{WeightTrackApp.ViewModels.WeightViewModel}!SetOperatingWeight@{SetOperatingWeight}}
+\index{SetOperatingWeight@{SetOperatingWeight}!WeightTrackApp.ViewModels.WeightViewModel@{WeightTrackApp.ViewModels.WeightViewModel}}
+\doxysubsubsection{\texorpdfstring{SetOperatingWeight()}{SetOperatingWeight()}}
+{\footnotesize\ttfamily \label{a04483_ab12a8bc68e9c573c1492ae19dd1184c8_ab12a8bc68e9c573c1492ae19dd1184c8} 
+void Weight\+Track\+App.\+View\+Models.\+Weight\+View\+Model.\+Set\+Operating\+Weight (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{a01451}{Weights}}?}]{weight}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Sets the operating weight to a new or existing weight entry. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em weight} & The weight entry to operate on. If null, creates a new entry.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{a04483_a5c6f4c285d9196301d5c1a894103f685_a5c6f4c285d9196301d5c1a894103f685}\index{WeightTrackApp.ViewModels.WeightViewModel@{WeightTrackApp.ViewModels.WeightViewModel}!\_busyText@{\_busyText}}
+\index{\_busyText@{\_busyText}!WeightTrackApp.ViewModels.WeightViewModel@{WeightTrackApp.ViewModels.WeightViewModel}}
+\doxysubsubsection{\texorpdfstring{\_busyText}{\_busyText}}
+{\footnotesize\ttfamily \label{a04483_a5c6f4c285d9196301d5c1a894103f685_a5c6f4c285d9196301d5c1a894103f685} 
+string Weight\+Track\+App.\+View\+Models.\+Weight\+View\+Model.\+\_\+busy\+Text\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The text displayed to indicate the status of a background operation. 
+
+\Hypertarget{a04483_a5bff961ff166bad59e750bd17510a316_a5bff961ff166bad59e750bd17510a316}\index{WeightTrackApp.ViewModels.WeightViewModel@{WeightTrackApp.ViewModels.WeightViewModel}!\_context@{\_context}}
+\index{\_context@{\_context}!WeightTrackApp.ViewModels.WeightViewModel@{WeightTrackApp.ViewModels.WeightViewModel}}
+\doxysubsubsection{\texorpdfstring{\_context}{\_context}}
+{\footnotesize\ttfamily \label{a04483_a5bff961ff166bad59e750bd17510a316_a5bff961ff166bad59e750bd17510a316} 
+readonly \mbox{\hyperlink{a01439}{Database\+Context}} Weight\+Track\+App.\+View\+Models.\+Weight\+View\+Model.\+\_\+context\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{a04483_a98007d6920095516c1ba53bbc0dd4df0_a98007d6920095516c1ba53bbc0dd4df0}\index{WeightTrackApp.ViewModels.WeightViewModel@{WeightTrackApp.ViewModels.WeightViewModel}!\_isBusy@{\_isBusy}}
+\index{\_isBusy@{\_isBusy}!WeightTrackApp.ViewModels.WeightViewModel@{WeightTrackApp.ViewModels.WeightViewModel}}
+\doxysubsubsection{\texorpdfstring{\_isBusy}{\_isBusy}}
+{\footnotesize\ttfamily \label{a04483_a98007d6920095516c1ba53bbc0dd4df0_a98007d6920095516c1ba53bbc0dd4df0} 
+bool Weight\+Track\+App.\+View\+Models.\+Weight\+View\+Model.\+\_\+is\+Busy\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Indicates whether a background operation is currently running. 
+
+\Hypertarget{a04483_aa9edc4265ace62ccebf87d6da8abe92e_aa9edc4265ace62ccebf87d6da8abe92e}\index{WeightTrackApp.ViewModels.WeightViewModel@{WeightTrackApp.ViewModels.WeightViewModel}!\_operatingWeights@{\_operatingWeights}}
+\index{\_operatingWeights@{\_operatingWeights}!WeightTrackApp.ViewModels.WeightViewModel@{WeightTrackApp.ViewModels.WeightViewModel}}
+\doxysubsubsection{\texorpdfstring{\_operatingWeights}{\_operatingWeights}}
+{\footnotesize\ttfamily \label{a04483_aa9edc4265ace62ccebf87d6da8abe92e_aa9edc4265ace62ccebf87d6da8abe92e} 
+\mbox{\hyperlink{a01451}{Weights}} Weight\+Track\+App.\+View\+Models.\+Weight\+View\+Model.\+\_\+operating\+Weights = new()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The weight entry currently being operated on (create/edit). 
+
+\Hypertarget{a04483_ae19001b0461f61838bb34f249277f6e3_ae19001b0461f61838bb34f249277f6e3}\index{WeightTrackApp.ViewModels.WeightViewModel@{WeightTrackApp.ViewModels.WeightViewModel}!\_weights@{\_weights}}
+\index{\_weights@{\_weights}!WeightTrackApp.ViewModels.WeightViewModel@{WeightTrackApp.ViewModels.WeightViewModel}}
+\doxysubsubsection{\texorpdfstring{\_weights}{\_weights}}
+{\footnotesize\ttfamily \label{a04483_ae19001b0461f61838bb34f249277f6e3_ae19001b0461f61838bb34f249277f6e3} 
+Observable\+Collection$<$\mbox{\hyperlink{a01451}{Weights}}$>$ Weight\+Track\+App.\+View\+Models.\+Weight\+View\+Model.\+\_\+weights = new()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Collection of all weight entries displayed in the UI. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+View\+Models/\mbox{\hyperlink{a01196}{Weight\+View\+Model.\+cs}}\end{DoxyCompactItemize}

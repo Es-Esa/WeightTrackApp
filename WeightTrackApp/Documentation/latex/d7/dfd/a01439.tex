@@ -1,0 +1,369 @@
+\doxysection{Weight\+Track\+App.\+Data.\+Database\+Context Class Reference}
+\hypertarget{a01439}{}\label{a01439}\index{WeightTrackApp.Data.DatabaseContext@{WeightTrackApp.Data.DatabaseContext}}
+
+
+Provides an asynchronous context for managing SQLite database operations.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+async Task$<$ IEnumerable$<$ TTable $>$ $>$ \mbox{\hyperlink{a01439_ad02346d31f06fda1781f7119c0b20226_ad02346d31f06fda1781f7119c0b20226}{Get\+All\+Async$<$ TTable $>$}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves all records from the specified table. \end{DoxyCompactList}\item 
+async Task$<$ IEnumerable$<$ TTable $>$ $>$ \mbox{\hyperlink{a01439_a512a437fb66dbb959a1ad988b3881ccf_a512a437fb66dbb959a1ad988b3881ccf}{Get\+Filetered\+Async$<$ TTable $>$}} (Expression$<$ Func$<$ TTable, bool $>$ $>$ predicate)
+\begin{DoxyCompactList}\small\item\em Retrieves records from the specified table that match a given predicate. \end{DoxyCompactList}\item 
+async Task$<$ TTable $>$ \mbox{\hyperlink{a01439_ad3ab5943eb5942a905fafe9bc8e9ecea_ad3ab5943eb5942a905fafe9bc8e9ecea}{Get\+Item\+By\+Key\+Async$<$ TTable $>$}} (object primary\+Key)
+\begin{DoxyCompactList}\small\item\em Retrieves a record from the specified table by its primary key. \end{DoxyCompactList}\item 
+async Task$<$ bool $>$ \mbox{\hyperlink{a01439_a674117adbf36314bc76004cd2fe779f1_a674117adbf36314bc76004cd2fe779f1}{Add\+Item\+Async$<$ TTable $>$}} (TTable item)
+\begin{DoxyCompactList}\small\item\em Adds a new record to the specified table. \end{DoxyCompactList}\item 
+async Task$<$ bool $>$ \mbox{\hyperlink{a01439_af6ac1977d5dbae31eec401d25c0adf9c_af6ac1977d5dbae31eec401d25c0adf9c}{Update\+Item\+Async$<$ TTable $>$}} (TTable item)
+\begin{DoxyCompactList}\small\item\em Updates an existing record in the specified table. \end{DoxyCompactList}\item 
+async Task$<$ bool $>$ \mbox{\hyperlink{a01439_ab25f55a19f69079653dfc6b992e2de1e_ab25f55a19f69079653dfc6b992e2de1e}{Delete\+Item\+Async$<$ TTable $>$}} (TTable item)
+\begin{DoxyCompactList}\small\item\em Deletes a record from the specified table. \end{DoxyCompactList}\item 
+async Task$<$ bool $>$ \mbox{\hyperlink{a01439_accee231dc4d327659ea6adef049232bb_accee231dc4d327659ea6adef049232bb}{Delete\+Item\+By\+Key\+Async$<$ TTable $>$}} (object primary\+Key)
+\begin{DoxyCompactList}\small\item\em Deletes a record from the specified table by its primary key. \end{DoxyCompactList}\item 
+async Value\+Task \mbox{\hyperlink{a01439_ad084c267cef22a3287ff095705840c9b_ad084c267cef22a3287ff095705840c9b}{Dispose\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Disposes of the database connection asynchronously. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{a01439_a8266ff319d37c28b59798f017b3fb7f7_a8266ff319d37c28b59798f017b3fb7f7}{Db\+Path}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em The full path to the database file in the application\textquotesingle{}s data directory. \end{DoxyCompactList}\item 
+SQLite\+Async\+Connection \mbox{\hyperlink{a01439_a595be2711fe1f8f6819d4460bdfa449e_a595be2711fe1f8f6819d4460bdfa449e}{Database}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Initializes or retrieves the SQLite database connection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+async Task \mbox{\hyperlink{a01439_a8e809e45ff50f3565a71b740fea60388_a8e809e45ff50f3565a71b740fea60388}{Create\+Table\+If\+Not\+Exists$<$ TTable $>$}} ()
+\begin{DoxyCompactList}\small\item\em Ensures a table for the specified type exists in the database. \end{DoxyCompactList}\item 
+async Task$<$ Async\+Table\+Query$<$ TTable $>$ $>$ \mbox{\hyperlink{a01439_a89fa90b66ba88186af87bea7230927a2_a89fa90b66ba88186af87bea7230927a2}{Get\+Table\+Async$<$ TTable $>$}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves a table query object for the specified type. \end{DoxyCompactList}\item 
+async Task$<$ TResult $>$ \mbox{\hyperlink{a01439_a98c6a2d82c1fdb8ec5c5d3f0e55a83ed_a98c6a2d82c1fdb8ec5c5d3f0e55a83ed}{Execute$<$ TTable, TResult $>$}} (Func$<$ Task$<$ TResult $>$ $>$ action)
+\begin{DoxyCompactList}\small\item\em Executes a given operation while ensuring the table exists. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+SQLite\+Async\+Connection \mbox{\hyperlink{a01439_a07e882d2cf8fed34c7ace7026e788834_a07e882d2cf8fed34c7ace7026e788834}{\+\_\+connection}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const string \mbox{\hyperlink{a01439_af95fe488b3b85cb25bce79e01652e079_af95fe488b3b85cb25bce79e01652e079}{Db\+Name}} = "{}My\+Database.\+db3"{}
+\begin{DoxyCompactList}\small\item\em The name of the database file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Provides an asynchronous context for managing SQLite database operations. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{a01439_a674117adbf36314bc76004cd2fe779f1_a674117adbf36314bc76004cd2fe779f1}\index{WeightTrackApp.Data.DatabaseContext@{WeightTrackApp.Data.DatabaseContext}!AddItemAsync$<$ TTable $>$@{AddItemAsync$<$ TTable $>$}}
+\index{AddItemAsync$<$ TTable $>$@{AddItemAsync$<$ TTable $>$}!WeightTrackApp.Data.DatabaseContext@{WeightTrackApp.Data.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{AddItemAsync$<$ TTable $>$()}{AddItemAsync< TTable >()}}
+{\footnotesize\ttfamily \label{a01439_a674117adbf36314bc76004cd2fe779f1_a674117adbf36314bc76004cd2fe779f1} 
+async Task$<$ bool $>$ Weight\+Track\+App.\+Data.\+Database\+Context.\+Add\+Item\+Async$<$ TTable $>$ (\begin{DoxyParamCaption}\item[{TTable}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds a new record to the specified table. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TTable} & The type of the table to operate on.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em item} & The record to add.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the operation was successful, otherwise false.
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TTable} : {\em class}]\item[{\em TTable} : {\em new()}]\end{description}
+\end{Desc}
+\Hypertarget{a01439_a8e809e45ff50f3565a71b740fea60388_a8e809e45ff50f3565a71b740fea60388}\index{WeightTrackApp.Data.DatabaseContext@{WeightTrackApp.Data.DatabaseContext}!CreateTableIfNotExists$<$ TTable $>$@{CreateTableIfNotExists$<$ TTable $>$}}
+\index{CreateTableIfNotExists$<$ TTable $>$@{CreateTableIfNotExists$<$ TTable $>$}!WeightTrackApp.Data.DatabaseContext@{WeightTrackApp.Data.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{CreateTableIfNotExists$<$ TTable $>$()}{CreateTableIfNotExists< TTable >()}}
+{\footnotesize\ttfamily \label{a01439_a8e809e45ff50f3565a71b740fea60388_a8e809e45ff50f3565a71b740fea60388} 
+async Task Weight\+Track\+App.\+Data.\+Database\+Context.\+Create\+Table\+If\+Not\+Exists$<$ TTable $>$ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Ensures a table for the specified type exists in the database. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TTable} & The type of the table to create.\\
+\hline
+\end{DoxyTemplParams}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TTable} : {\em class}]\item[{\em TTable} : {\em new()}]\end{description}
+\end{Desc}
+\Hypertarget{a01439_ab25f55a19f69079653dfc6b992e2de1e_ab25f55a19f69079653dfc6b992e2de1e}\index{WeightTrackApp.Data.DatabaseContext@{WeightTrackApp.Data.DatabaseContext}!DeleteItemAsync$<$ TTable $>$@{DeleteItemAsync$<$ TTable $>$}}
+\index{DeleteItemAsync$<$ TTable $>$@{DeleteItemAsync$<$ TTable $>$}!WeightTrackApp.Data.DatabaseContext@{WeightTrackApp.Data.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{DeleteItemAsync$<$ TTable $>$()}{DeleteItemAsync< TTable >()}}
+{\footnotesize\ttfamily \label{a01439_ab25f55a19f69079653dfc6b992e2de1e_ab25f55a19f69079653dfc6b992e2de1e} 
+async Task$<$ bool $>$ Weight\+Track\+App.\+Data.\+Database\+Context.\+Delete\+Item\+Async$<$ TTable $>$ (\begin{DoxyParamCaption}\item[{TTable}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes a record from the specified table. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TTable} & The type of the table to operate on.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em item} & The record to delete.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the operation was successful, otherwise false.
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TTable} : {\em class}]\item[{\em TTable} : {\em new()}]\end{description}
+\end{Desc}
+\Hypertarget{a01439_accee231dc4d327659ea6adef049232bb_accee231dc4d327659ea6adef049232bb}\index{WeightTrackApp.Data.DatabaseContext@{WeightTrackApp.Data.DatabaseContext}!DeleteItemByKeyAsync$<$ TTable $>$@{DeleteItemByKeyAsync$<$ TTable $>$}}
+\index{DeleteItemByKeyAsync$<$ TTable $>$@{DeleteItemByKeyAsync$<$ TTable $>$}!WeightTrackApp.Data.DatabaseContext@{WeightTrackApp.Data.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{DeleteItemByKeyAsync$<$ TTable $>$()}{DeleteItemByKeyAsync< TTable >()}}
+{\footnotesize\ttfamily \label{a01439_accee231dc4d327659ea6adef049232bb_accee231dc4d327659ea6adef049232bb} 
+async Task$<$ bool $>$ Weight\+Track\+App.\+Data.\+Database\+Context.\+Delete\+Item\+By\+Key\+Async$<$ TTable $>$ (\begin{DoxyParamCaption}\item[{object}]{primary\+Key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes a record from the specified table by its primary key. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TTable} & The type of the table to operate on.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em primary\+Key} & The primary key of the record to delete.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the operation was successful, otherwise false.
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TTable} : {\em class}]\item[{\em TTable} : {\em new()}]\end{description}
+\end{Desc}
+\Hypertarget{a01439_ad084c267cef22a3287ff095705840c9b_ad084c267cef22a3287ff095705840c9b}\index{WeightTrackApp.Data.DatabaseContext@{WeightTrackApp.Data.DatabaseContext}!DisposeAsync@{DisposeAsync}}
+\index{DisposeAsync@{DisposeAsync}!WeightTrackApp.Data.DatabaseContext@{WeightTrackApp.Data.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{DisposeAsync()}{DisposeAsync()}}
+{\footnotesize\ttfamily \label{a01439_ad084c267cef22a3287ff095705840c9b_ad084c267cef22a3287ff095705840c9b} 
+async Value\+Task Weight\+Track\+App.\+Data.\+Database\+Context.\+Dispose\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Disposes of the database connection asynchronously. 
+
+\Hypertarget{a01439_a98c6a2d82c1fdb8ec5c5d3f0e55a83ed_a98c6a2d82c1fdb8ec5c5d3f0e55a83ed}\index{WeightTrackApp.Data.DatabaseContext@{WeightTrackApp.Data.DatabaseContext}!Execute$<$ TTable, TResult $>$@{Execute$<$ TTable, TResult $>$}}
+\index{Execute$<$ TTable, TResult $>$@{Execute$<$ TTable, TResult $>$}!WeightTrackApp.Data.DatabaseContext@{WeightTrackApp.Data.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{Execute$<$ TTable, TResult $>$()}{Execute< TTable, TResult >()}}
+{\footnotesize\ttfamily \label{a01439_a98c6a2d82c1fdb8ec5c5d3f0e55a83ed_a98c6a2d82c1fdb8ec5c5d3f0e55a83ed} 
+async Task$<$ TResult $>$ Weight\+Track\+App.\+Data.\+Database\+Context.\+Execute$<$ TTable, TResult $>$ (\begin{DoxyParamCaption}\item[{Func$<$ Task$<$ TResult $>$ $>$}]{action}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Executes a given operation while ensuring the table exists. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TTable} & The type of the table to operate on.\\
+\hline
+{\em TResult} & The type of the result of the operation.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em action} & The operation to execute.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The result of the operation.
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TTable} : {\em class}]\item[{\em TTable} : {\em new()}]\end{description}
+\end{Desc}
+\Hypertarget{a01439_ad02346d31f06fda1781f7119c0b20226_ad02346d31f06fda1781f7119c0b20226}\index{WeightTrackApp.Data.DatabaseContext@{WeightTrackApp.Data.DatabaseContext}!GetAllAsync$<$ TTable $>$@{GetAllAsync$<$ TTable $>$}}
+\index{GetAllAsync$<$ TTable $>$@{GetAllAsync$<$ TTable $>$}!WeightTrackApp.Data.DatabaseContext@{WeightTrackApp.Data.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{GetAllAsync$<$ TTable $>$()}{GetAllAsync< TTable >()}}
+{\footnotesize\ttfamily \label{a01439_ad02346d31f06fda1781f7119c0b20226_ad02346d31f06fda1781f7119c0b20226} 
+async Task$<$ IEnumerable$<$ TTable $>$ $>$ Weight\+Track\+App.\+Data.\+Database\+Context.\+Get\+All\+Async$<$ TTable $>$ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves all records from the specified table. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TTable} & The type of the table to query.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+A collection of all records in the table.
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TTable} : {\em class}]\item[{\em TTable} : {\em new()}]\end{description}
+\end{Desc}
+\Hypertarget{a01439_a512a437fb66dbb959a1ad988b3881ccf_a512a437fb66dbb959a1ad988b3881ccf}\index{WeightTrackApp.Data.DatabaseContext@{WeightTrackApp.Data.DatabaseContext}!GetFileteredAsync$<$ TTable $>$@{GetFileteredAsync$<$ TTable $>$}}
+\index{GetFileteredAsync$<$ TTable $>$@{GetFileteredAsync$<$ TTable $>$}!WeightTrackApp.Data.DatabaseContext@{WeightTrackApp.Data.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{GetFileteredAsync$<$ TTable $>$()}{GetFileteredAsync< TTable >()}}
+{\footnotesize\ttfamily \label{a01439_a512a437fb66dbb959a1ad988b3881ccf_a512a437fb66dbb959a1ad988b3881ccf} 
+async Task$<$ IEnumerable$<$ TTable $>$ $>$ Weight\+Track\+App.\+Data.\+Database\+Context.\+Get\+Filetered\+Async$<$ TTable $>$ (\begin{DoxyParamCaption}\item[{Expression$<$ Func$<$ TTable, bool $>$ $>$}]{predicate}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves records from the specified table that match a given predicate. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TTable} & The type of the table to query.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em predicate} & The filter condition to apply.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A collection of records that match the filter condition.
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TTable} : {\em class}]\item[{\em TTable} : {\em new()}]\end{description}
+\end{Desc}
+\Hypertarget{a01439_ad3ab5943eb5942a905fafe9bc8e9ecea_ad3ab5943eb5942a905fafe9bc8e9ecea}\index{WeightTrackApp.Data.DatabaseContext@{WeightTrackApp.Data.DatabaseContext}!GetItemByKeyAsync$<$ TTable $>$@{GetItemByKeyAsync$<$ TTable $>$}}
+\index{GetItemByKeyAsync$<$ TTable $>$@{GetItemByKeyAsync$<$ TTable $>$}!WeightTrackApp.Data.DatabaseContext@{WeightTrackApp.Data.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{GetItemByKeyAsync$<$ TTable $>$()}{GetItemByKeyAsync< TTable >()}}
+{\footnotesize\ttfamily \label{a01439_ad3ab5943eb5942a905fafe9bc8e9ecea_ad3ab5943eb5942a905fafe9bc8e9ecea} 
+async Task$<$ TTable $>$ Weight\+Track\+App.\+Data.\+Database\+Context.\+Get\+Item\+By\+Key\+Async$<$ TTable $>$ (\begin{DoxyParamCaption}\item[{object}]{primary\+Key}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Retrieves a record from the specified table by its primary key. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TTable} & The type of the table to query.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em primary\+Key} & The primary key of the record to retrieve.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The record with the specified primary key.
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TTable} : {\em class}]\item[{\em TTable} : {\em new()}]\end{description}
+\end{Desc}
+\Hypertarget{a01439_a89fa90b66ba88186af87bea7230927a2_a89fa90b66ba88186af87bea7230927a2}\index{WeightTrackApp.Data.DatabaseContext@{WeightTrackApp.Data.DatabaseContext}!GetTableAsync$<$ TTable $>$@{GetTableAsync$<$ TTable $>$}}
+\index{GetTableAsync$<$ TTable $>$@{GetTableAsync$<$ TTable $>$}!WeightTrackApp.Data.DatabaseContext@{WeightTrackApp.Data.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{GetTableAsync$<$ TTable $>$()}{GetTableAsync< TTable >()}}
+{\footnotesize\ttfamily \label{a01439_a89fa90b66ba88186af87bea7230927a2_a89fa90b66ba88186af87bea7230927a2} 
+async Task$<$ Async\+Table\+Query$<$ TTable $>$ $>$ Weight\+Track\+App.\+Data.\+Database\+Context.\+Get\+Table\+Async$<$ TTable $>$ (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Retrieves a table query object for the specified type. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TTable} & The type of the table to query.\\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+A query object for accessing the table.
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TTable} : {\em class}]\item[{\em TTable} : {\em new()}]\end{description}
+\end{Desc}
+\Hypertarget{a01439_af6ac1977d5dbae31eec401d25c0adf9c_af6ac1977d5dbae31eec401d25c0adf9c}\index{WeightTrackApp.Data.DatabaseContext@{WeightTrackApp.Data.DatabaseContext}!UpdateItemAsync$<$ TTable $>$@{UpdateItemAsync$<$ TTable $>$}}
+\index{UpdateItemAsync$<$ TTable $>$@{UpdateItemAsync$<$ TTable $>$}!WeightTrackApp.Data.DatabaseContext@{WeightTrackApp.Data.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{UpdateItemAsync$<$ TTable $>$()}{UpdateItemAsync< TTable >()}}
+{\footnotesize\ttfamily \label{a01439_af6ac1977d5dbae31eec401d25c0adf9c_af6ac1977d5dbae31eec401d25c0adf9c} 
+async Task$<$ bool $>$ Weight\+Track\+App.\+Data.\+Database\+Context.\+Update\+Item\+Async$<$ TTable $>$ (\begin{DoxyParamCaption}\item[{TTable}]{item}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Updates an existing record in the specified table. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TTable} & The type of the table to operate on.\\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em item} & The record to update.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the operation was successful, otherwise false.
+\end{DoxyReturn}
+\begin{Desc}
+\item[Type Constraints]\begin{description}
+\item[{\em TTable} : {\em class}]\item[{\em TTable} : {\em new()}]\end{description}
+\end{Desc}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{a01439_a07e882d2cf8fed34c7ace7026e788834_a07e882d2cf8fed34c7ace7026e788834}\index{WeightTrackApp.Data.DatabaseContext@{WeightTrackApp.Data.DatabaseContext}!\_connection@{\_connection}}
+\index{\_connection@{\_connection}!WeightTrackApp.Data.DatabaseContext@{WeightTrackApp.Data.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{\_connection}{\_connection}}
+{\footnotesize\ttfamily \label{a01439_a07e882d2cf8fed34c7ace7026e788834_a07e882d2cf8fed34c7ace7026e788834} 
+SQLite\+Async\+Connection Weight\+Track\+App.\+Data.\+Database\+Context.\+\_\+connection\hspace{0.3cm}{\ttfamily [private]}}
+
+\Hypertarget{a01439_af95fe488b3b85cb25bce79e01652e079_af95fe488b3b85cb25bce79e01652e079}\index{WeightTrackApp.Data.DatabaseContext@{WeightTrackApp.Data.DatabaseContext}!DbName@{DbName}}
+\index{DbName@{DbName}!WeightTrackApp.Data.DatabaseContext@{WeightTrackApp.Data.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{DbName}{DbName}}
+{\footnotesize\ttfamily \label{a01439_af95fe488b3b85cb25bce79e01652e079_af95fe488b3b85cb25bce79e01652e079} 
+const string Weight\+Track\+App.\+Data.\+Database\+Context.\+Db\+Name = "{}My\+Database.\+db3"{}\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The name of the database file. 
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{a01439_a595be2711fe1f8f6819d4460bdfa449e_a595be2711fe1f8f6819d4460bdfa449e}\index{WeightTrackApp.Data.DatabaseContext@{WeightTrackApp.Data.DatabaseContext}!Database@{Database}}
+\index{Database@{Database}!WeightTrackApp.Data.DatabaseContext@{WeightTrackApp.Data.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{Database}{Database}}
+{\footnotesize\ttfamily \label{a01439_a595be2711fe1f8f6819d4460bdfa449e_a595be2711fe1f8f6819d4460bdfa449e} 
+SQLite\+Async\+Connection Weight\+Track\+App.\+Data.\+Database\+Context.\+Database\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private]}}
+
+
+
+Initializes or retrieves the SQLite database connection. 
+
+\Hypertarget{a01439_a8266ff319d37c28b59798f017b3fb7f7_a8266ff319d37c28b59798f017b3fb7f7}\index{WeightTrackApp.Data.DatabaseContext@{WeightTrackApp.Data.DatabaseContext}!DbPath@{DbPath}}
+\index{DbPath@{DbPath}!WeightTrackApp.Data.DatabaseContext@{WeightTrackApp.Data.DatabaseContext}}
+\doxysubsubsection{\texorpdfstring{DbPath}{DbPath}}
+{\footnotesize\ttfamily \label{a01439_a8266ff319d37c28b59798f017b3fb7f7_a8266ff319d37c28b59798f017b3fb7f7} 
+string Weight\+Track\+App.\+Data.\+Database\+Context.\+Db\+Path\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [private]}}
+
+
+
+The full path to the database file in the application\textquotesingle{}s data directory. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Data/\mbox{\hyperlink{a00008}{Database.\+cs}}\end{DoxyCompactItemize}

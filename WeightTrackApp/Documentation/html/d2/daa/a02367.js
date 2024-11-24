@@ -1,0 +1,25 @@
+var a02367 =
+[
+    [ "compat_button_inset_horizontal_material", "d2/daa/a02367_aa206de6d4a7cf8743c54c67300a89f24.html#aa206de6d4a7cf8743c54c67300a89f24", null ],
+    [ "compat_button_inset_vertical_material", "d2/daa/a02367_a5a174790c69300888b7603ed3bb38921.html#a5a174790c69300888b7603ed3bb38921", null ],
+    [ "compat_button_padding_horizontal_material", "d2/daa/a02367_a171b3f41136c80ca6abc5b211b013b7a.html#a171b3f41136c80ca6abc5b211b013b7a", null ],
+    [ "compat_button_padding_vertical_material", "d2/daa/a02367_ae96e06927374deaff9aa631429c2c516.html#ae96e06927374deaff9aa631429c2c516", null ],
+    [ "compat_control_corner_material", "d2/daa/a02367_a052e8379bdbd81f625cc7abf10ee6976.html#a052e8379bdbd81f625cc7abf10ee6976", null ],
+    [ "compat_notification_large_icon_max_height", "d2/daa/a02367_a305675327501ebb33c5394c61753a8f1.html#a305675327501ebb33c5394c61753a8f1", null ],
+    [ "compat_notification_large_icon_max_width", "d2/daa/a02367_a4bee2d747b6e7d992918ace6ca72bec8.html#a4bee2d747b6e7d992918ace6ca72bec8", null ],
+    [ "notification_action_icon_size", "d2/daa/a02367_aedf477c5bb91b7106ca22744ddf45e75.html#aedf477c5bb91b7106ca22744ddf45e75", null ],
+    [ "notification_action_text_size", "d2/daa/a02367_ad6ede97a1c0a20259907a73667da8a50.html#ad6ede97a1c0a20259907a73667da8a50", null ],
+    [ "notification_big_circle_margin", "d2/daa/a02367_add58ce42be03714903150c7c306c3f35.html#add58ce42be03714903150c7c306c3f35", null ],
+    [ "notification_content_margin_start", "d2/daa/a02367_a7992f1ef42764c740b8a2f33c38e679c.html#a7992f1ef42764c740b8a2f33c38e679c", null ],
+    [ "notification_large_icon_height", "d2/daa/a02367_af160cb2af60c2f9979c73f8ffc9507cb.html#af160cb2af60c2f9979c73f8ffc9507cb", null ],
+    [ "notification_large_icon_width", "d2/daa/a02367_a1bc55e6a668e2dc270460e0464c0b4c0.html#a1bc55e6a668e2dc270460e0464c0b4c0", null ],
+    [ "notification_main_column_padding_top", "d2/daa/a02367_ada99ceabfe0420d57b3152dd8e10c086.html#ada99ceabfe0420d57b3152dd8e10c086", null ],
+    [ "notification_media_narrow_margin", "d2/daa/a02367_ac7bf845b496a0f99ba61651d317c8917.html#ac7bf845b496a0f99ba61651d317c8917", null ],
+    [ "notification_right_icon_size", "d2/daa/a02367_ad31aa6ef37825798150df125b6cd43cb.html#ad31aa6ef37825798150df125b6cd43cb", null ],
+    [ "notification_right_side_padding_top", "d2/daa/a02367_aeb77461758404493d9b9c2dc9346b996.html#aeb77461758404493d9b9c2dc9346b996", null ],
+    [ "notification_small_icon_background_padding", "d2/daa/a02367_aad0656a4448a07876fe68a85bb2c8ece.html#aad0656a4448a07876fe68a85bb2c8ece", null ],
+    [ "notification_small_icon_size_as_large", "d2/daa/a02367_a3d8f44a51214ebd963ffc1446b568c1d.html#a3d8f44a51214ebd963ffc1446b568c1d", null ],
+    [ "notification_subtext_size", "d2/daa/a02367_ae6b852f6b822583b7778ae1fc7a0b8f2.html#ae6b852f6b822583b7778ae1fc7a0b8f2", null ],
+    [ "notification_top_pad", "d2/daa/a02367_a6bd21a8f54fe306efef1f19128f975af.html#a6bd21a8f54fe306efef1f19128f975af", null ],
+    [ "notification_top_pad_large_text", "d2/daa/a02367_aec9cca8e250320deb79d11a3c4a70c2d.html#aec9cca8e250320deb79d11a3c4a70c2d", null ]
+];

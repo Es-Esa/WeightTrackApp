@@ -1,0 +1,19 @@
+digraph "obj/Debug/net8.0-android"
+{
+ // LATEX_PDF_SIZE
+  bgcolor="transparent";
+  edge [fontname=Helvetica,fontsize=10,labelfontname=Helvetica,labelfontsize=10];
+  node [fontname=Helvetica,fontsize=10,shape=box,height=0.2,width=0.4];
+  compound=true
+  subgraph clusterdir_a71c3b2ad23b9ff58220dd012d201987 {
+    graph [ bgcolor="#dadada", pencolor="grey50", label="Debug", fontname=Helvetica,fontsize=10 style="filled,dashed", URL="dir_a71c3b2ad23b9ff58220dd012d201987.html",tooltip=""]
+  subgraph clusterdir_22cef7f5bf3416dbcfd566c3ad61f21f {
+    graph [ bgcolor="#dadada", pencolor="grey25", label="", fontname=Helvetica,fontsize=10 style="filled,bold", URL="dir_22cef7f5bf3416dbcfd566c3ad61f21f.html",tooltip=""]
+    dir_22cef7f5bf3416dbcfd566c3ad61f21f [shape=plaintext, label="net8.0-android"];
+  dir_833aecfae7c920db4704d88fb38b8660 [label="android-arm", fillcolor="#676767", color="grey25", style="filled", URL="dir_833aecfae7c920db4704d88fb38b8660.html",tooltip=""];
+  dir_65cb678cfb5e1cb5196e2d9e67af4ed5 [label="android-arm64", fillcolor="#676767", color="grey25", style="filled", URL="dir_65cb678cfb5e1cb5196e2d9e67af4ed5.html",tooltip=""];
+  dir_c825b3633dcabdde6fe3b863057cf84c [label="android-x64", fillcolor="#676767", color="grey25", style="filled", URL="dir_c825b3633dcabdde6fe3b863057cf84c.html",tooltip=""];
+  dir_21a1d4d7e73aa50642a52f2e1a502fb4 [label="android-x86", fillcolor="#676767", color="grey25", style="filled", URL="dir_21a1d4d7e73aa50642a52f2e1a502fb4.html",tooltip=""];
+  }
+  }
+}
